@@ -1,6 +1,7 @@
 <head>
 <title>Hack64 - Web Patcher</title>
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+<link href="https://fonts.cdnfonts.com/css/monster-friend-back" rel="stylesheet">
 <script src="./libpatch.js"></script>
 <!--<script src="/jscripts/lzma.js"></script>-->
 <style>
@@ -45,24 +46,17 @@ input[type='text']
         <div style="flex: 1; flex-grow: 0; text-align: center;">
             <div style="display: inline-block;">
                 <div style="background-color: rgb(47,49,54); padding: 10px;">
-                    <div style="font-size: 24px;">Web Patcher</div>
-                    <div style="font-size: 11px; color: #888;">APS &bull; BPS &bull; IPS &bull; MOD (Star Rod) &bull; PPF &bull; UPS &bull; VCDiff (xdelta)</div>
+                    <div style="font-family: 'Monster Friend Back', font-size: 24px;">UnderPatcher</div>
                 </div>
                 <table style="background-color: rgb(47,49,54); padding: 10px;">
-                    <tr><td>ROM</td><td><input type="file" id="input-rom" accept=".bin, .rom, .iso, .z64, .nes, .smc, .sfc, .gb, .gba, .gbc, .nds, .3ds, .gmc"></td></tr>
-                    <tr><td>Patch</td><td><input type="file" id="input-patch" accept=".patch, .ppf, .bps, .ips, .ups, .xdelta, .aps, .mod"></td></tr>
+                    <tr><td>리소스 파일<br>(data.win)</td><td><input type="file" id="input-rom" accept=".win"></td></tr>
+                    <tr><td>Patch</td><td><input type="file" id="input-patch" accept=".xdelta"></td></tr>
                     <tr><td>Save as</td><td><input type="text" style="width: 100%;" id="input-saveas" spellcheck="false"></td></tr>
                 </table>
                 <table style="background-color: rgb(47,49,54); width: 100%;">
                     <tr>
-                        <td>
-                            <label style="padding: 5px; background-color:rgba(0,0,0,0.15); font-size: 12px; vertical-align: center;" title="Skip checksum verification (not recommended)">
-                                <input type="checkbox" style="vertical-align: middle;" id="input-skip-checksums">
-                                <span style="margin-left: 5px;">Skip checksums</span>
-                            </label>
-                        </td>
-                        <td style="text-align: right;">
-                            <input type="button" value="Patch" id="input-apply" disabled="true">
+                        <td style="text-align: middle;">
+                            <input type="button" value="패치!" id="input-apply" disabled="true">
                         </td>
                     </tr>
                 </table>
@@ -70,8 +64,6 @@ input[type='text']
                     <div id="progress-bar" style="display: inline-block; height: 2px; width: 0px; background: #0FF;"></div>
                 </div>
             </div>
-            <div style="font-size: 12px; margin-top:10px;"><a href="/">Home</a></div>
-        </div>
         <div style="flex: 1;"></div>
     </div>
 <script>
