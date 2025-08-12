@@ -54,8 +54,14 @@ input[type='text']
                 </table>
                 <table style="background-color: rgb(47,49,54); width: 100%;">
                     <tr>
-                        <td style="text-align: center;">
-                            <input type="button" value="패치!" id="input-apply" disabled="true">
+                        <td>
+                            <label style="padding: 5px; background-color:rgba(0,0,0,0.15); font-size: 12px; vertical-align: center;" title="Skip checksum verification (not recommended)">
+                                <input type="checkbox" style="vertical-align: middle;" id="input-skip-checksums">
+                                <span style="margin-left: 5px;">Skip checksums</span>
+                            </label>
+                        </td>
+                        <td style="text-align: right;">
+                            <input type="button" value="Patch" id="input-apply" disabled="true">
                         </td>
                     </tr>
                 </table>
@@ -63,6 +69,8 @@ input[type='text']
                     <div id="progress-bar" style="display: inline-block; height: 2px; width: 0px; background: #0FF;"></div>
                 </div>
             </div>
+            <div style="font-size: 12px; margin-top:10px;"><a href="/">Home</a></div>
+        </div>
         <div style="flex: 1;"></div>
     </div>
 <script>
